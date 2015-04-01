@@ -1,16 +1,16 @@
-import {Router} from 'aurelia-router';
-import bootstrap from 'bootstrap';
+import {Router} from "aurelia-router";
 
 export class App {
   static inject() { return [Router]; }
-  constructor(router) {
+
+  constructor(router){
     this.router = router;
     this.router.configure(config => {
-      config.title = 'Aurelia';
+      config.title = "Reddit";
+
       config.map([
-        { route: ['','welcome'],  moduleId: './welcome',      nav: true, title:'Welcome' },
-        { route: 'flickr',        moduleId: './flickr',       nav: true },
-        { route: 'child-router',  moduleId: './child-router', nav: true, title:'Child Router' }
+        {route: ["", "funny"], moduleId: "funny", nav: true, title: "Funny Subreddit"},
+        {route: "gifs", moduleId: "gifs", nav: true, title: "Gifs Subreddit"}
       ]);
     });
   }

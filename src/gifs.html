@@ -1,0 +1,10 @@
+<template>
+  <ul class="list-group">
+    <li class="list-group-item" repeat.for="p of posts">
+      <img src.bind="p.data.thumbnail" />
+      <a href="http://reddit.com${p.data.permalink}">
+        ${p.data.title}
+      </a>
+    </li>
+  </ul>
+</template>
